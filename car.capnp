@@ -374,6 +374,8 @@ struct CarControl {
     leftLaneVisible @7: Bool;
     rightLaneDepart @8: Bool;
     leftLaneDepart @9: Bool;
+    leadDistance @10: Float32;
+    leadProb @11: Float32;
 
     enum VisualAlert {
       # these are the choices from the Honda
