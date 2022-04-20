@@ -319,6 +319,7 @@ struct CarControl {
   enabled @0 :Bool;
   latActive @11: Bool;
   longActive @12: Bool;
+  resumeSpam @15: Bool;
 
   # Actuator commands as computed by controlsd
   actuators @6 :Actuators;
