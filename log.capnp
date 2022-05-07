@@ -1796,9 +1796,11 @@ struct NavRoute {
 }
 
 struct EncodeData {
-  idx @0 :EncodeIndex;
-  data @1 :Data;
-  header @2 :Data;
+  data @0 :Data;
+  timestampEof @1 :Int64;
+  idx @2 :UInt32;
+  segmentNum @3 :Int32;
+  flags @4 :UInt32;
 }
 
 struct Event {
