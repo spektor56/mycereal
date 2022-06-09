@@ -60,6 +60,7 @@ services = {
   "driverCameraState": (True, DCAM_FREQ, DCAM_FREQ),
   "driverEncodeIdx": (False, DCAM_FREQ, 1),
   "driverState": (True, DCAM_FREQ, DCAM_FREQ / 2),
+  "driverStateV2": (True, DCAM_FREQ, DCAM_FREQ / 2),
   "driverMonitoringState": (True, DCAM_FREQ, DCAM_FREQ / 2),
   "wideRoadEncodeIdx": (False, 20., 1),
   "wideRoadCameraState": (True, 20., 20),
