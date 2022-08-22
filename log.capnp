@@ -1633,6 +1633,35 @@ struct Joystick {
   buttons @1: List(Bool);
 }
 
+struct DriverStateV2 {
+  frameId @0 :UInt32;
+  modelExecutionTime @1 :Float32;
+  dspExecutionTime @2 :Float32;
+  rawPredictions @3 :Data;
+
+  poorVisionProb @4 :Float32;
+  wheelOnRightProb @5 :Float32;
+
+  leftDriverData @6 :DriverData;
+  rightDriverData @7 :DriverData;
+
+  struct DriverData {
+    faceOrientation @0 :List(Float32);
+    faceOrientationStd @1 :List(Float32);
+    facePosition @2 :List(Float32);
+    facePositionStd @3 :List(Float32);
+    faceProb @4 :Float32;
+    leftEyeProb @5 :Float32;
+    rightEyeProb @6 :Float32;
+    leftBlinkProb @7 :Float32;
+    rightBlinkProb @8 :Float32;
+    sunglassesProb @9 :Float32;
+    occludedProb @10 :Float32;
+    readyProb @11 :List(Float32);
+    notReadyProb @12 :List(Float32);
+  }
+}
+
 struct DriverState {
   frameId @0 :UInt32;
   modelExecutionTime @14 :Float32;
@@ -1873,6 +1902,7 @@ struct Event {
     driverMonitoringState @71: DriverMonitoringState;
     liveLocationKalman @72 :LiveLocationKalman;
     modelV2 @75 :ModelDataV2;
+    driverStateV2 @92 :DriverStateV2;
 
     # camera stuff, each camera state has a matching encode idx
     roadCameraState @2 :FrameData;
